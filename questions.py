@@ -28,8 +28,8 @@ correct_answers_index = [1, 2, 0, 3, 1]
 #contador de puntaje
 score = 0
 
-# Selecciona 3 preguntas aleatorias con sus respuestas correctas y el índice de la respuesta correcta
-questions_to_ask = random.choices(list(zip(questions, answers, correct_answers_index)), k=3)
+# la funcion random.sample() selecciona 3 preguntas aleatorias con sus respuestas correctas y el índice de la respuesta correcta, sin repeticion
+questions_to_ask = random.sample(list(zip(questions, answers, correct_answers_index)), k=3)
 
 # El usuario deberá contestar 3 preguntas
 for question, answers_options, correct_index in questions_to_ask:
